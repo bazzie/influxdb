@@ -1,0 +1,2 @@
+---
+influxdb::manage_repo: false
