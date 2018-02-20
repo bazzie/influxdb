@@ -1,2 +1,2 @@
 ---
-influxdb::manage_repo: false
+influxdb::manage_repo: true

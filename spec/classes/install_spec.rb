@@ -1,10 +1,9 @@
 require 'spec_helper'
 
 describe 'influxdb::install' do
-
   let(:hiera_config) { 'hiera.yaml' }
 
-  hiera = Hiera.new({ :config => 'hiera.yaml' })
+  hiera = Hiera.new( { :config => 'hiera.yaml' } )
   manage_repo = hiera.lookup('manage_repo', nil, nil)
 
   on_supported_os.each do |os, os_facts|

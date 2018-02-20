@@ -12,8 +12,14 @@ class influxdb::install {
 
   if $influxdb::manage_repo {
 
+  
+
     yumrepo {'influxdb':
-      ensure => present,
+      ensure   => present,
+      baseurl  => 'https://repos.influxdata.com/rhel/\$releasever/\$basearch/stable',
+      enabled  => true,
+      gpgcheck => true,
+      gpgkey = 'https://repos.influxdata.com/influxdb.key',    
     }
 
   }
